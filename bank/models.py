@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 
 class Branch(models.Model):
@@ -61,5 +63,5 @@ class Transaction(models.Model):
         return self.tran_type
     
         
-    
+
 
