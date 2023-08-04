@@ -1,0 +1,30 @@
+<!-- customers_table.html -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+<body>
+<h1>Customer Details</h1>
+<table class="table-auto border-collapse w-full mt-4">
+    <thead>
+        <tr>
+            <th class="px-4 py-2 border">Mobile Number</th>
+            <th class="px-4 py-2 border">Name</th>
+            <th class="px-4 py-2 border">Address</th>
+            <th class="px-4 py-2 border">Branch</th>
+            <th class="px-4 py-2 border">Account</th>
+            <th class="px-4 py-2 border">Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for customer in customers %}
+        <tr>
+            <td class="px-4 py-2 border">{{ customer.mobile_number }}</td>
+            <td class="px-4 py-2 border">{{ customer.name }}</td>
+            <td class="px-4 py-2 border">{{ customer.address }}</td>
+            <td class="px-4 py-2 border">{{ customer.branch }}</td>
+            <td class="px-4 py-2 border">{{ customer.account.account_number }}</td>
+            <td class="px-4 py-2 border">{{ customer.account.balance }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>

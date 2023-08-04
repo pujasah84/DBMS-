@@ -1,5 +1,14 @@
 <h1>Add Customer</h1>
+<style>
+  .errorlist {
+    color: red;
+  }
+  </style>
 <form method="post" action="">
-  {% csrf_token %} {{form.as_p}}
-  <button type="submit">Submit</button>
+  {% csrf_token %} {{customerForm.as_p}}
+  {{accountForm.as_p}}
+
+
+
+  <input type="submit" value="Add Customer" />
 </form>
